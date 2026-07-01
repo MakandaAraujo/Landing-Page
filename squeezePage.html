@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZooVigilante 🐾 - Proteção Animal</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: url('imagens/2.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+            color: #2c3e50; /* Texto num tom de azul escuro, mais suave que preto */
+        }
+        
+        /* Caixa do título mais fofa e vibrante */
+        .header-box {
+            background: linear-gradient(135deg, #ff8c00, #ff5722); /* Degradê laranja divertido */
+            padding: 10px 40px;
+            border-radius: 50px; /* Borda bem redondinha */
+            box-shadow: 0 8px 20px rgba(255, 87, 34, 0.4);
+            margin-bottom: 25px;
+            text-align: center;
+            border: 3px solid #fff;
+        }
+
+        .header-title {
+            color: #ffffff;
+            font-size: 2.2em;
+            margin: 0;
+            letter-spacing: 1px;
+            font-weight: 900;
+        }
+
+        /* Container claro estilo vidro (Glassmorphism Light) */
+        .container {
+            max-width: 500px;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.85); /* Fundo branco transparente */
+            padding: 40px;
+            border-radius: 25px; /* Bordas suaves */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            text-align: center;
+            backdrop-filter: blur(8px);
+            box-sizing: border-box;
+            border: 2px solid rgba(255,255,255,0.5);
+        }
+
+        h2 {
+            color: #ff5722;
+            margin-bottom: 20px;
+            font-size: 1.6em;
+        }
+
+        .red-text {
+            color: #e53535;
+        }
+        
+        .subheadline { 
+            font-size: 1.1em; 
+            margin-bottom: 25px; 
+            line-height: 1.5; 
+            font-weight: 500;
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        input, textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 15px; /* Campos de texto redondinhos */
+            background-color: #f9f9f9;
+            color: #333;
+            box-sizing: border-box;
+            font-size: 1em;
+            transition: all 0.3s;
+        }
+        
+        /* Efeito divertido quando clica para digitar */
+        input:focus, textarea:focus {
+            border-color: #ff8c00;
+            background-color: #fff;
+            outline: none;
+            box-shadow: 0 0 10px rgba(255, 140, 0, 0.2);
+        }
+        
+        button {
+            background: linear-gradient(135deg, #4CAF50, #2E7D32); /* Botão verde vibrante (Ação positiva) */
+            color: white;
+            border: none;
+            padding: 18px;
+            font-size: 1.2em;
+            font-weight: bold;
+            border-radius: 50px; /* Botão em formato de pílula */
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 15px rgba(76, 175, 80, 0.4);
+            margin-top: 10px;
+        }
+        
+        /* Animação do botão "pulando" quando passa o mouse */
+        button:hover { 
+            transform: translateY(-5px); /* Sobe um pouquinho */
+            box-shadow: 0 10px 20px rgba(76, 175, 80, 0.6); /* Aumenta a sombra */
+        }
+        
+        .footer {
+            margin-top: 30px;
+            font-size: 0.85em;
+            color: #666;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="header-box">
+        <h1 class="header-title">ZOOVIGILANTE 🦸‍♂️🐾</h1>
+    </div>
+    
+    <div class="container">
+        
+        <p class="subheadline">
+            <span class="red-text"><strong>Muitos animais estão invisíveis na nossa cidade...</strong></span><br>
+            ...até que VOCÊ os coloca no mapa da vida! 🗺️❤️
+        </p>
+
+        <h2>🚨 Faça uma Denúncia 🚨</h2>
+        
+        <form action="agradecimento.html" method="GET">
+            <input type="text" placeholder="📍 Onde o animal está? (Rua, bairro...)" required>
+            <textarea rows="4" placeholder="📝 Descreva o que está acontecendo..." required></textarea>
+            <button type="submit">Enviar Alerta 🚀</button>
+        </form>
+
+        <div class="footer">
+            <p>Conectando cidadãos e autoridades para proteger quem não tem voz. 🐶🐱<br>
+            <strong>Parceiro Oficial: IBAMA</strong></p>
+        </div>
+        
+    </div>
+
+</body>
+</html>
