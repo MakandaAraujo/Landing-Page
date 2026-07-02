@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html lang="pt-PT">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZooVigilante 🐾 - Denúncia Recebida</title>
+    <title>ZooVigilante 🐾 - Download Iniciado</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            /* Usando a imagem 1, como preferiu para esta página */
             background-image: url('1.png');
             background-size: cover;
             background-position: center;
@@ -23,7 +22,6 @@
             color: #2c3e50;
         }
         
-        /* A mesma caixa do título vibrante para manter a coerência da marca */
         .header-box {
             background: linear-gradient(135deg, #ff8c00, #ff5722);
             padding: 10px 40px;
@@ -42,11 +40,10 @@
             font-weight: 900;
         }
 
-        /* Container claro estilo vidro */
         .container {
             max-width: 550px;
             width: 100%;
-            background-color: rgba(255, 255, 255, 0.85); /* Fundo branco translúcido */
+            background-color: rgba(255, 255, 255, 0.85);
             padding: 50px 40px;
             border-radius: 25px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
@@ -58,8 +55,8 @@
 
         h2 {
             color: #ff5722;
-            margin-bottom: 20px;
-            font-size: 1.6em;
+            margin-bottom: 10px;
+            font-size: 1.8em;
             line-height: 1.3;
         }
 
@@ -68,28 +65,48 @@
             line-height: 1.5;
             margin-bottom: 30px;
             font-weight: 600;
-            color: #444; /* Cinzento escuro para melhor legibilidade */
+            color: #444;
         }
 
-        /* O botão verde de sucesso que convida à ação */
-        .btn-app {
+       
+        .stores-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn-store {
             display: inline-block;
-            background: linear-gradient(135deg, #4CAF50, #2E7D32);
+            background-color: #222; 
             color: white;
-            padding: 18px 30px;
+            padding: 15px 25px;
             text-decoration: none;
             font-weight: bold;
-            border-radius: 50px;
-            text-transform: uppercase;
-            font-size: 1.1em;
+            border-radius: 12px;
+            font-size: 1em;
             transition: all 0.3s ease;
-            box-shadow: 0 6px 15px rgba(76, 175, 80, 0.4);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            border: 1px solid #555;
         }
 
-        /* Animação do botão ao passar o rato (mouse) */
-        .btn-app:hover { 
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(76, 175, 80, 0.6);
+        .btn-store:hover { 
+            background-color: #000;
+            transform: translateY(-3px);
+        }
+
+        .loader {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #ff5722;
+            font-weight: bold;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 0.5; }
+            50% { opacity: 1; }
+            100% { opacity: 0.5; }
         }
     </style>
 </head>
@@ -101,11 +118,18 @@
 
     <div class="container">
         
-        <h2>SEJA RESPONSÁVEL PELA FELICIDADE DE UMA VIDA 🥰🐶</h2>
+        <h2>VOCÊ É UM HERÓI! 🥰🐶</h2>
         
-        <p>A sua denúncia chega direto a quem pode agir, com prioridade inteligente. 🚓⚡</p>
+        <p>Obrigado por se juntar à nossa comunidade. Juntos, seremos responsáveis pela felicidade de milhares de vidas.</p>
         
-        <a href="#" class="btn-app">Baixe o Aplicativo e Faça a Diferença 📲</a>
+        <div class="loader">O download do seu app começará em instantes...</div>
+
+        <p style="font-size: 0.9em; margin-top: 30px; margin-bottom: 15px;">Se o download não iniciar, escolha sua plataforma abaixo:</p>
+        
+        <div class="stores-container">
+            <a href="#" class="btn-store">🍏 Baixar na App Store</a>
+            <a href="#" class="btn-store">▶️ Baixar no Google Play</a>
+        </div>
     </div>
 
 </body>
