@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ZooVigilante 🐾 - Proteção Animal</title>
     <style>
+        /* Rolagem suave ativada */
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-image: url('2.png');
@@ -12,21 +17,20 @@
             background-position: center;
             background-attachment: fixed;
             margin: 0;
-            padding: 20px;
+            padding: 40px 20px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
             box-sizing: border-box;
-            color: #2c3e50; /* Texto num tom de azul escuro, mais suave que preto */
+            color: #2c3e50;
         }
         
-        /* Caixa do título mais fofa e vibrante */
         .header-box {
-            background: linear-gradient(135deg, #ff8c00, #ff5722); /* Degradê laranja divertido */
+            background: linear-gradient(135deg, #ff8c00, #ff5722);
             padding: 10px 40px;
-            border-radius: 50px; /* Borda bem redondinha */
+            border-radius: 50px;
             box-shadow: 0 8px 20px rgba(255, 87, 34, 0.4);
             margin-bottom: 25px;
             text-align: center;
@@ -41,13 +45,12 @@
             font-weight: 900;
         }
 
-        /* Container claro estilo vidro (Glassmorphism Light) */
         .container {
             max-width: 500px;
             width: 100%;
-            background-color: rgba(255, 255, 255, 0.85); /* Fundo branco transparente */
+            background-color: rgba(255, 255, 255, 0.85);
             padding: 40px;
-            border-radius: 25px; /* Bordas suaves */
+            border-radius: 25px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
             text-align: center;
             backdrop-filter: blur(8px);
@@ -82,7 +85,7 @@
             width: 100%;
             padding: 15px;
             border: 2px solid #e0e0e0;
-            border-radius: 15px; /* Campos de texto redondinhos */
+            border-radius: 15px;
             background-color: #f9f9f9;
             color: #333;
             box-sizing: border-box;
@@ -90,7 +93,6 @@
             transition: all 0.3s;
         }
         
-        /* Efeito divertido quando clica para digitar */
         input:focus, textarea:focus {
             border-color: #ff8c00;
             background-color: #fff;
@@ -99,13 +101,13 @@
         }
         
         button {
-            background: linear-gradient(135deg, #4CAF50, #2E7D32); /* Botão verde vibrante (Ação positiva) */
+            background: linear-gradient(135deg, #4CAF50, #2E7D32);
             color: white;
             border: none;
             padding: 18px;
             font-size: 1.2em;
             font-weight: bold;
-            border-radius: 50px; /* Botão em formato de pílula */
+            border-radius: 50px;
             cursor: pointer;
             text-transform: uppercase;
             transition: all 0.3s ease;
@@ -113,10 +115,9 @@
             margin-top: 10px;
         }
         
-        /* Animação do botão "pulando" quando passa o mouse */
         button:hover { 
-            transform: translateY(-5px); /* Sobe um pouquinho */
-            box-shadow: 0 10px 20px rgba(76, 175, 80, 0.6); /* Aumenta a sombra */
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(76, 175, 80, 0.6);
         }
         
         .footer {
@@ -124,6 +125,113 @@
             font-size: 0.85em;
             color: #666;
             line-height: 1.5;
+        }
+
+        /* --- SESSÃO DE DEPOIMENTOS --- */
+        .testimonials-container {
+            max-width: 500px;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.85);
+            padding: 30px;
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            text-align: center;
+            backdrop-filter: blur(8px);
+            box-sizing: border-box;
+            border: 2px solid rgba(255,255,255,0.5);
+            margin-top: 60px; /* Margem maior para separar bem as seções */
+            margin-bottom: 40px;
+        }
+
+        .testimonials-title {
+            color: #ff5722;
+            font-size: 1.3em;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .testimonial-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 15px;
+            border-radius: 15px;
+            border-left: 5px solid #ff8c00;
+            text-align: left;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .card-content {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .avatar-placeholder {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2em;
+            flex-shrink: 0;
+        }
+
+        .avatar-mariana { background-color: #3498db; }
+        .avatar-carlos { background-color: #e67e22; }
+
+        .card-details { flex-grow: 1; }
+
+        .card-text {
+            font-style: italic;
+            color: #555;
+            font-size: 0.95em;
+            margin-bottom: 5px;
+            line-height: 1.4;
+            margin-top: 0;
+        }
+
+        .card-author {
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 0.9em;
+            margin: 0;
+        }
+
+        /* --- BOTÃO FLUTUANTE (SCROLL) --- */
+        .floating-scroll-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #ff8c00, #ff5722);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.8em;
+            text-decoration: none;
+            box-shadow: 0 6px 20px rgba(255, 87, 34, 0.5);
+            border: 2px solid #fff;
+            z-index: 1000; /* Garante que fica por cima de tudo */
+            /* Animação para chamar atenção */
+            animation: bounceFixed 2s infinite;
+        }
+
+        @keyframes bounceFixed {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
         }
     </style>
 </head>
@@ -134,7 +242,6 @@
     </div>
     
     <div class="container">
-        
         <p class="subheadline">
             <span class="red-text"><strong>Muitos animais estão invisíveis na nossa cidade...</strong></span><br>
             ...até que VOCÊ os coloca no mapa da vida! 🗺️❤️
@@ -152,8 +259,36 @@
             <p>Conectando cidadãos e autoridades para proteger quem não tem voz. 🐶🐱<br>
             <strong>Parceiro Oficial: IBAMA</strong></p>
         </div>
-        
     </div>
 
+    <div class="testimonials-container" id="depoimentos">
+        <h3 class="testimonials-title">Comunidade de Heróis 🌟</h3>
+        
+        <div class="testimonial-cards">
+            <div class="card">
+                <div class="card-content">
+                    <div class="avatar-placeholder avatar-mariana">M</div>
+                    <div class="card-details">
+                        <p class="card-text">"Aplicativo fantástico! Vi um cachorrinho machucado na praça, fiz a denúncia em 2 minutos e a equipe de resgate chegou super rápido."</p>
+                        <p class="card-author">Mariana S., Professora</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-content">
+                    <div class="avatar-placeholder avatar-carlos">C</div>
+                    <div class="card-details">
+                        <p class="card-text">"Sempre quis ajudar mas não sabia para quem ligar. O ZooVigilante simplificou tudo. Recomendo para todos os meus vizinhos!"</p>
+                        <p class="card-author">Carlos T., Analista de Sistemas</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="#depoimentos" class="floating-scroll-btn" onclick="this.style.animation = 'none';">
+        ⬇️
+    </a>
 </body>
 </html>
